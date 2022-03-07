@@ -1,5 +1,5 @@
 import React from 'react';
-import useFtoC from '../hooks/useF/useFtoC';
+import useFtoC from '../hooks/useFtoC';
 import useFecht from '../hooks/useFecht';
 import useLocation from '../hooks/useLocation';
 
