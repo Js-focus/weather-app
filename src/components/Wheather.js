@@ -6,7 +6,8 @@ import useLocation from '../hooks/useLocation';
 const Wheather = () => {
     const {lat, long} = useLocation(0)
     const {data , loading, error} = useFecht(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=e1c4175935677f2e4dc895ebb8b821f2`);
-    const temp = data?.main.temp;
+    //8 marzo temperatura que se recibe de API es 289(???) no lo se rick
+    const temp = ((((data?.main.temp)- 273.15)* 1.8) + 32 ).toFixed(0);
     const {temperature, isF, change} = useFtoC(temp)
     
 
